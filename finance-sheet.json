@@ -1,0 +1,26 @@
+{
+    "income": [
+        {
+            "name": "Work",
+            "amount": 2000,
+            "dayOfMonth": 23
+        }
+    ],
+    "spending": [
+        {
+            "name": "Petrol",
+            "amount": 100,
+            "dayOfMonth": 1
+        },
+        {
+            "name": "Rent",
+            "amount": 1000,
+            "dayOfMonth": 20
+        },
+        {
+            "name": "Phone Bill",
+            "amount": 60,
+            "dayOfMonth": 23
+        }
+    ]
+}
