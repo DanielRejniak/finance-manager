@@ -6,6 +6,8 @@ There is also an additional feature that will print a summary your spending's to
 
 ![Demo Screen](./assets/screenshot_1.png)
 
+**Note:** This project is part of my 30min coding challenges. Basically write something fun in 30 minutes in any language. 🤓
+
 ## Installation ⚙️
 
 Steps required for initial setup
