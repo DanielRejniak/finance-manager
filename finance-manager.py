@@ -7,7 +7,7 @@ total_income = 0
 total_spending = 0
 
 # Define tables
-spendingIncomeSavingSummary = PrettyTable(['Income','Amount'])
+spendingIncomeSavingSummary = PrettyTable(['Type','Amount'])
 upcomingBillsSummary = PrettyTable(['Direct Debit','Amount','Due in (n) days'])
 otherSpendingSummary = PrettyTable(['Spending','Amount'])
 
@@ -65,7 +65,7 @@ spendingIncomeSavingSummary.add_row(['Total spending', str(total_spending)])
 spendingIncomeSavingSummary.add_row(['Total saving', str(savings)])
 
 # Print summary tables
-print("\n## Income Summary")
+print("\n## Finance Summary")
 print(spendingIncomeSavingSummary)
 print("\n## Direct Debit Summary")
 print(upcomingBillsSummary)
