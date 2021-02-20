@@ -23,7 +23,7 @@ source ./env/bin/activate
 pip3 install -r requirements.txt
 ```
 
-## Usage
+## Usage 👨‍💻
 
 1. Fill in the `finance-sheet.json` (see sample data for reference)
 2. Run the `finance-manager.py` python script : 
