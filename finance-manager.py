@@ -7,8 +7,9 @@ total_income = 0
 total_spending = 0
 
 # Define tables
-spendingIncomeSavingSummary = PrettyTable(['Source','Amount'])
-upcomingBillsSummary = PrettyTable(['Spending','Amount','Due in (n) days'])
+spendingIncomeSavingSummary = PrettyTable(['Income','Amount'])
+upcomingBillsSummary = PrettyTable(['Direct Debit','Amount','Due in (n) days'])
+otherSpendingSummary = PrettyTable(['Spending','Amount'])
 
 def calculateDaysLeft(day):
 
@@ -38,13 +39,22 @@ for incomeItem in data['income']:
     total_income += incomeItem['amount']
 
 # Print spendign data
-for spendingItem in data['spending']:
+for directDebitItem in data['direct_debit']:
 
     # Sum up the spending's
-    total_spending += spendingItem['amount']
+    total_spending += directDebitItem['amount']
 
     # Populate the table
-    upcomingBillsSummary.add_row([spendingItem['name'],spendingItem['amount'],calculateDaysLeft(spendingItem['dayOfMonth'])])
+    upcomingBillsSummary.add_row([directDebitItem['name'],directDebitItem['amount'],calculateDaysLeft(directDebitItem['dayOfMonth'])])
+
+# Calculate other spendign data
+for otherSpendingItem in data['other_spendings']:
+
+    # Sum up the spending's
+    total_spending += otherSpendingItem['amount']
+
+    # Populate the table
+    otherSpendingSummary.add_row([otherSpendingItem['name'],otherSpendingItem['amount']])
 
 # Calculate savings
 savings = total_income - total_spending
@@ -55,5 +65,9 @@ spendingIncomeSavingSummary.add_row(['Total spending', str(total_spending)])
 spendingIncomeSavingSummary.add_row(['Total saving', str(savings)])
 
 # Print summary tables
+print("\n## Income Summary")
 print(spendingIncomeSavingSummary)
+print("\n## Direct Debit Summary")
 print(upcomingBillsSummary)
+print("\n## Other spending's Summary")
+print(otherSpendingSummary)

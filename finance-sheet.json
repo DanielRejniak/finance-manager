@@ -3,24 +3,35 @@
         {
             "name": "Work",
             "amount": 2000,
-            "dayOfMonth": 23
+            "dayOfMonth": 20
         }
     ],
-    "spending": [
-        {
-            "name": "Petrol",
-            "amount": 100,
-            "dayOfMonth": 1
-        },
-        {
-            "name": "Rent",
-            "amount": 1000,
-            "dayOfMonth": 20
-        },
+    "direct_debit": [
         {
             "name": "Phone Bill",
             "amount": 60,
-            "dayOfMonth": 23
+            "dayOfMonth": 22
+        },
+        {
+            "name": "Internet",
+            "amount": 60,
+            "dayOfMonth": 4
+        },
+        {
+            "name": "Car Insurance",
+            "amount": 72,
+            "dayOfMonth": 12
+        },
+        {
+            "name": "Netflix",
+            "amount": 10,
+            "dayOfMonth": 2
+        }
+    ],
+    "other_spendings": [
+        {
+            "name": "Random stuff from internet",
+            "amount": 300
         }
     ]
 }
